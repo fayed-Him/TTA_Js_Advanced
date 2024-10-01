@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction of DOM</title>
+<style>
+   h1{
+    color: darkblue;
+   }
+   #anybutton {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+
+   }
+</style>
+</head>
+<body>
+    <h1>Welcome to level 2</h1>
+    <p>This is a simple paragraph</p>
+    <button id="anybutton">Click me</button>
+    <script>
+        const heading = document.querySelector('h1');
+        console.log(heading);
+        const para = document.querySelector('p');
+        console.log(para);
+        const button = document.querySelector('button');
+        console.log(button);
+        para.style.color='darkred';
+        para.textContent = 'This is a new paragraph(1)';
+    button.addEventListener('click',function() {
+        alert('Button is clicked');
+        para.style.color ='darkgreen';
+        para.textContent = 'Button is Clicked';
+    })
+    </script>
+</body>
+</html>
