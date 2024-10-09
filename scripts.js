@@ -11,33 +11,19 @@ const displayTasks = () => {
     })
 }
 
-const saveTaskToLocalStorage = () => {
-    localStorage.setItem('tasks', JSON.stringify(tasks))
-}
-
 const addTask = () => {
     const newTaskInput = document.querySelector('#newTask');
     const newTask = newTaskInput.value;
 
     if (newTask.trim() !== ""){
-       tasks.push(newTask);
-       newTaskInput.value = "";
-       saveTaskToLocalStorage();
-       displayTasks();
-    }
-    else{
-        alert('Please enter a task');
-    }
-}
-const addTaskButton = document.querySelector('#addTaskButton');
-addTaskButton.addEventListener("click", addTask);
-
-const loadTasksFromStorage = () =>{
-const taskStored = localStorage.getItem('tasks');
-if (taskStored) {
-    tasks = JSON.parse(taskStored);
-    displayTasks();
-}
-}
-loadTasksFromStorage();
-displayTasks();
+         tasks.push(newTask);
+        newTaskInput.value = "";
+        displayTasks();
+     }
+     else{
+         alert('Please enter a task');
+     }
+ }
+ const addTaskButton = document.querySelector('#addTaskButton');
+ addTaskButton.addEventListener("click", addTask);
+ displayTasks();
