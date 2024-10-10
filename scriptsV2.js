@@ -52,7 +52,7 @@ const addTask = () => {
 const deleteTask = (index) => {
   if(confirm('Are you sure you want to delete this task?')){
 tasks.splice(index, 1);
-// saveTaskToLocalStorage();
+saveTaskToLocalStorage();
 displayTasks();  
 } 
 }
